@@ -6,7 +6,7 @@
 /*   By: afarapon <afarapon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/28 16:20:21 by afarapon          #+#    #+#             */
-/*   Updated: 2017/11/04 14:29:59 by afarapon         ###   ########.fr       */
+/*   Updated: 2017/11/04 14:44:03 by afarapon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define H_LIBFT_H
 # define NULL_RET { return (0); }
 # include <string.h>
-# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
 
