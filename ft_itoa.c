@@ -6,7 +6,7 @@
 /*   By: afarapon <afarapon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/28 16:11:15 by afarapon          #+#    #+#             */
-/*   Updated: 2017/10/29 12:28:08 by afarapon         ###   ########.fr       */
+/*   Updated: 2017/10/29 19:25:01 by afarapon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,8 @@ char			*ft_itoa(int n)
 	{
 		if (res[len] != '-')
 			res[len--] = (z % 10) + '0';
-		else len--;
+		else
+			len--;
 		z /= 10;
 	}
 	return (res);

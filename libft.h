@@ -6,13 +6,13 @@
 /*   By: afarapon <afarapon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/28 16:20:21 by afarapon          #+#    #+#             */
-/*   Updated: 2017/10/29 09:28:31 by afarapon         ###   ########.fr       */
+/*   Updated: 2017/11/04 14:29:59 by afarapon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef H_LIBFT_H
 # define H_LIBFT_H
-
+# define NULL_RET { return (0); }
 # include <string.h>
 # include <stdio.h>
 # include <stdlib.h>
@@ -32,7 +32,6 @@ char				*ft_strcpy(char *dst, const char *src);
 char				*ft_strncpy(char *dest, const char *src, size_t n);
 char				*ft_strcat(char *dest, const char *src);
 char				*ft_strncat(char *dest, const char *src, size_t n);
-size_t				ft_strlcpy(char *dest, const char *src, size_t n);
 size_t				ft_strlcat(char *dest, const char *src, size_t n);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
@@ -86,6 +85,12 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+
 char				*ft_strrev(char *str);
+void				ft_sortints(int *src, size_t n,
+	int (*sort)(int el1, int el2));
+size_t				ft_strlcpy(char *dest, const char *src, size_t n);
+void				ft_foreach(int *tab, size_t length, void (*f)(int));
+void				ft_swap(int *a, int *b);
 
 #endif

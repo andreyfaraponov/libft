@@ -6,7 +6,7 @@
 /*   By: afarapon <afarapon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/28 16:14:40 by afarapon          #+#    #+#             */
-/*   Updated: 2017/10/28 16:14:41 by afarapon         ###   ########.fr       */
+/*   Updated: 2017/10/29 15:58:26 by afarapon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,19 @@
 
 int		ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	while (n > 0 && *s1 && *s2)
+	if (s1 && s2)
 	{
-		if (*s1 == *s2 && n--)
+		while (n > 0 && *s1 && *s2)
 		{
-			s1++;
-			s2++;
+			if (*s1 == *s2 && n--)
+			{
+				s1++;
+				s2++;
+			}
+			else
+				return (0);
 		}
-		else
-			return (0);
+		return (1);
 	}
-	return (1);
+	return (0);
 }

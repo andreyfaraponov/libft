@@ -6,7 +6,7 @@
 /*   By: afarapon <afarapon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/28 16:15:04 by afarapon          #+#    #+#             */
-/*   Updated: 2017/10/29 12:01:38 by afarapon         ###   ########.fr       */
+/*   Updated: 2017/10/29 19:29:55 by afarapon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,20 +72,24 @@ char		**ft_strsplit(char const *s, char c)
 	size_t	i;
 	size_t	wc;
 
-	wc = ft_wc((char*)s, c);
-	if ((result = (char**)malloc(sizeof(char*) * (wc + 1))) == NULL)
-		return (NULL);
-	i = 0;
-	tmp = (char*)s;
-	while (i < wc)
+	if (s)
 	{
-		tmp = ft_trim(tmp, c, 1);
-		if ((result[i] = (char*)malloc(ft_str_word_len(tmp, c) + 1)) == NULL)
+		wc = ft_wc((char*)s, c);
+		if ((result = (char**)malloc(sizeof(char*) * (wc + 1))) == NULL)
 			return (NULL);
-		result[i] = ft_str_cpy(result[i], tmp, c);
-		tmp = ft_trim(tmp, c, 0);
-		i++;
+		i = -1;
+		tmp = (char*)s;
+		while (++i < wc)
+		{
+			tmp = ft_trim(tmp, c, 1);
+			if ((result[i] = (char*)malloc(ft_str_word_len(tmp, c) + 1))
+			== NULL)
+				return (NULL);
+			result[i] = ft_str_cpy(result[i], tmp, c);
+			tmp = ft_trim(tmp, c, 0);
+		}
+		result[i] = 0;
+		return (result);
 	}
-	result[i] = 0;
-	return (result);
+	return (NULL);
 }

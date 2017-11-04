@@ -6,7 +6,7 @@
 /*   By: afarapon <afarapon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/28 16:13:51 by afarapon          #+#    #+#             */
-/*   Updated: 2017/10/29 15:43:08 by afarapon         ###   ########.fr       */
+/*   Updated: 2017/10/29 19:35:21 by afarapon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 void		ft_striter(char *s, void (*f)(char *))
 {
-	if (s)
+	if (s && f)
 		while (*s)
-		{
-			f(s);
-			s++;
-		}	
+			f(s++);
 }

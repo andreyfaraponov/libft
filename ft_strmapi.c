@@ -6,7 +6,7 @@
 /*   By: afarapon <afarapon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/28 16:14:24 by afarapon          #+#    #+#             */
-/*   Updated: 2017/10/28 16:14:25 by afarapon         ###   ########.fr       */
+/*   Updated: 2017/10/29 15:58:51 by afarapon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,16 @@ char		*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 
 	i = 0;
-	if ((result = ft_strdup((char*)s)) == NULL)
-		return (NULL);
-	while (result[i])
+	if (s)
 	{
-		result[i] = f(i, result[i]);
-		i++;
+		if ((result = ft_strdup((char*)s)) == NULL)
+			return (NULL);
+		while (result[i])
+		{
+			result[i] = f(i, result[i]);
+			i++;
+		}
+		return (result);
 	}
-	return (result);
+	return (NULL);
 }

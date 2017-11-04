@@ -6,7 +6,7 @@
 /*   By: afarapon <afarapon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/28 16:13:47 by afarapon          #+#    #+#             */
-/*   Updated: 2017/10/28 16:13:48 by afarapon         ###   ########.fr       */
+/*   Updated: 2017/10/29 16:05:49 by afarapon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 int		ft_strequ(char const *s1, char const *s2)
 {
-	while (*s1)
+	if (s1 && s2)
 	{
-		if (*s1 == *s2)
+		while (*s1 == *s2)
 		{
+			if (*s1 == '\0')
+				return (1);
 			s1++;
 			s2++;
 		}
-		else
-			return (0);
 	}
-	return (1);
+	return (0);
 }

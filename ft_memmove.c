@@ -6,7 +6,7 @@
 /*   By: afarapon <afarapon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/28 16:12:21 by afarapon          #+#    #+#             */
-/*   Updated: 2017/10/29 10:39:00 by afarapon         ###   ########.fr       */
+/*   Updated: 2017/10/29 19:26:19 by afarapon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void		*ft_memmove(void *dest, const void *src, size_t n)
 {
 	void	*result;
-	
+
 	result = dest;
 	if (dest > src)
 	{
