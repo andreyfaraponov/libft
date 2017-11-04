@@ -6,7 +6,7 @@
 /*   By: afarapon <afarapon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/28 16:11:54 by afarapon          #+#    #+#             */
-/*   Updated: 2017/10/29 19:27:28 by afarapon         ###   ########.fr       */
+/*   Updated: 2017/11/04 23:13:54 by afarapon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,8 @@ void	*ft_memccpy(void *dest, const void *src, int c,
 
 	ddst = (unsigned char*)dest;
 	ssrc = (unsigned char*)src;
-	while (n > 0)
-	{
-		*ddst = *ssrc;
-		if (*ddst == (unsigned char)c)
-			return ((void*)(ddst + 1));
-		ddst++;
-		ssrc++;
-		n--;
-	}
+	while (n--)
+		if ((*ddst++ = *ssrc++) == (unsigned char)c)
+			return ((void*)(ddst));
 	return (0);
 }
