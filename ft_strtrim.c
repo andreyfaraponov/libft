@@ -32,9 +32,7 @@ static int	ft_strcount(const char *s, int c)
 char		*ft_strtrim(char const *s)
 {
 	char		*end;
-	int			i;
 
-	i = 0;
 	if (s)
 	{
 		while ((*s == ' ' || *s == '\n' || *s == '\t') && *s)

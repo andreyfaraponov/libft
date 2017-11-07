@@ -3,24 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afarapon <afarapon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: afarapon <afarapon@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/28 16:13:11 by afarapon          #+#    #+#             */
-/*   Updated: 2017/10/28 17:28:21 by afarapon         ###   ########.fr       */
+/*   Updated: 2017/11/05 23:48:38 by afarapon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 char		*ft_strchr(const char *s, int c)
 {
-	if (*s == c)
-		return ((char*)s);
-	while (*s)
+	unsigned char *tmp;
+	unsigned char chr;
+	
+	chr = (unsigned char)c;
+	tmp = (unsigned char*)s;
+	if (*tmp == chr)
+		return ((char*)tmp);
+	while (*tmp)
 	{
-		s++;
-		if (*s == c)
-			return ((char*)s);
+		tmp++;
+		if (*tmp == chr)
+			return ((char*)tmp);
 	}
 	return (0);
 }

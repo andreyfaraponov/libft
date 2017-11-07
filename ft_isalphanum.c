@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalphanum.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afarapon <afarapon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: afarapon <afarapon@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/04 17:36:48 by afarapon          #+#    #+#             */
-/*   Updated: 2017/11/04 17:45:24 by afarapon         ###   ########.fr       */
+/*   Updated: 2017/11/06 00:55:28 by afarapon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int		ft_isalphanum(const char *str)
 		return (0);
 	while (*str)
 	{
-		if (ft_isalnum(*str) || ft_isalpha(*str))
+		if (ft_isalnum(*str))
 			str++;
 		else
 			return (0);

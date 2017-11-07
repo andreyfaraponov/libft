@@ -15,7 +15,7 @@
 static void		ft_deleteelem(void *cont, size_t len)
 {
 	free(cont);
-	len = 0;
+	(void)len;
 }
 
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
