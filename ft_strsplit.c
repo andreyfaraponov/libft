@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static int	ft_str_word_len(char *str, char del)
+static int		ft_str_word_len(const char *str, char del)
 {
 	int		len;
 
@@ -25,9 +25,9 @@ static int	ft_str_word_len(char *str, char del)
 	return (len);
 }
 
-static int	ft_wc(char *str, char delim)
+static size_t	ft_wc(const char *str, char delim)
 {
-	int		wc;
+	size_t	wc;
 	int		i;
 
 	wc = 0;
@@ -38,10 +38,10 @@ static int	ft_wc(char *str, char delim)
 			wc++;
 		i++;
 	}
-	return (wc);
+	return (wc + 1);
 }
 
-static char	*ft_trim(char *str, char del, int flag)
+static char		*ft_trim(char *str, char del, int flag)
 {
 	while (*str == del && flag)
 		str++;
@@ -50,7 +50,7 @@ static char	*ft_trim(char *str, char del, int flag)
 	return (str);
 }
 
-static char	*ft_str_cpy(char *dest, char *src, char del)
+static char		*ft_str_cpy(char *dest, char *src, char del)
 {
 	char	*res;
 
@@ -65,26 +65,26 @@ static char	*ft_str_cpy(char *dest, char *src, char del)
 	return (res);
 }
 
-char		**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
 	char	**result;
 	char	*tmp;
 	size_t	i;
-	size_t	wc;
 
-	if (s)
+	if (s && (result = (char**)malloc(sizeof(char*) * ft_wc(s, c))))
 	{
-		wc = ft_wc((char*)s, c);
-		if ((result = (char**)malloc(sizeof(char*) * (wc + 1))) == NULL)
-			return (NULL);
 		i = -1;
 		tmp = (char*)s;
-		while (++i < wc)
+		while (++i < (ft_wc((char*)s, c) - 1))
 		{
 			tmp = ft_trim(tmp, c, 1);
-			if ((result[i] = (char*)malloc(ft_str_word_len(tmp, c) + 1))
-			== NULL)
+			if (!(result[i] = (char*)malloc(ft_str_word_len(tmp, c) + 1)))
+			{
+				while (--i)
+					ft_strdel(&result[i]);
+				free(result);
 				return (NULL);
+			}
 			result[i] = ft_str_cpy(result[i], tmp, c);
 			tmp = ft_trim(tmp, c, 0);
 		}
