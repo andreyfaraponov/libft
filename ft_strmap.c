@@ -18,9 +18,9 @@ char		*ft_strmap(char const *s, char (*f)(char))
 	unsigned int	i;
 
 	i = 0;
-	if (!s)
+	if (!s || !f)
 		return (NULL);
-	if ((result = ft_strdup((char*)s)) == NULL)
+	if (!(result = ft_strdup((char*)s)))
 		return (NULL);
 	while (result[i])
 	{

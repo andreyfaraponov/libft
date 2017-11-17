@@ -14,7 +14,7 @@ char		*ft_strchr(const char *s, int c)
 {
 	unsigned char *tmp;
 	unsigned char chr;
-	
+
 	chr = (unsigned char)c;
 	tmp = (unsigned char*)s;
 	if (*tmp == chr)
