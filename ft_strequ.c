@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afarapon <afarapon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: afarapon <afarapon@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/28 16:13:47 by afarapon          #+#    #+#             */
-/*   Updated: 2017/10/29 16:05:49 by afarapon         ###   ########.fr       */
+/*   Updated: 2017/11/19 00:24:33 by afarapon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int		ft_strequ(char const *s1, char const *s2)
 {

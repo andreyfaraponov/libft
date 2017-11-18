@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afarapon <afarapon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: afarapon <afarapon@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/28 16:13:15 by afarapon          #+#    #+#             */
-/*   Updated: 2017/10/29 15:39:37 by afarapon         ###   ########.fr       */
+/*   Updated: 2017/11/19 00:23:57 by afarapon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 void		ft_strclr(char *s)
 {
