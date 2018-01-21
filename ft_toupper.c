@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afarapon <afarapon@student.unit.ua>        +#+  +:+       +#+        */
+/*   By: afarapon <afarapon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/28 16:16:07 by afarapon          #+#    #+#             */
-/*   Updated: 2017/11/19 00:26:53 by afarapon         ###   ########.fr       */
+/*   Updated: 2017/10/28 17:41:46 by afarapon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int			ft_toupper(int c)
 {

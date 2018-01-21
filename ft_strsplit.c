@@ -6,7 +6,7 @@
 /*   By: afarapon <afarapon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/28 16:15:04 by afarapon          #+#    #+#             */
-/*   Updated: 2017/10/29 19:29:55 by afarapon         ###   ########.fr       */
+/*   Updated: 2018/01/15 19:38:56 by afarapon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static int		ft_str_word_len(const char *str, char del)
 		len++;
 		str++;
 	}
-	return (len);
+	return (sizeof(char) * len);
 }
 
 static size_t	ft_wc(const char *str, char delim)
@@ -34,7 +34,8 @@ static size_t	ft_wc(const char *str, char delim)
 	i = 0;
 	while (str[i])
 	{
-		if (str[i] != delim && (str[i - 1] == delim || str[i - 1] <= 0))
+		if (str[i] && str[i] != delim &&
+			(str[i + 1] == delim || str[i + 1] == 0))
 			wc++;
 		i++;
 	}
@@ -43,9 +44,9 @@ static size_t	ft_wc(const char *str, char delim)
 
 static char		*ft_trim(char *str, char del, int flag)
 {
-	while (*str == del && flag)
+	while (*str && *str == del && flag)
 		str++;
-	while (*str != del && !flag)
+	while (*str && *str != del && !flag)
 		str++;
 	return (str);
 }
@@ -71,7 +72,7 @@ char			**ft_strsplit(char const *s, char c)
 	char	*tmp;
 	size_t	i;
 
-	if (s && (result = (char**)malloc(sizeof(char*) * ft_wc(s, c))))
+	if (s && (result = (char**)malloc(sizeof(char*) * (ft_wc(s, c) + 1))))
 	{
 		i = -1;
 		tmp = (char*)s;
@@ -80,9 +81,9 @@ char			**ft_strsplit(char const *s, char c)
 			tmp = ft_trim(tmp, c, 1);
 			if (!(result[i] = (char*)malloc(ft_str_word_len(tmp, c) + 1)))
 			{
-				while (--i)
-					ft_strdel(&result[i]);
-				free(result);
+				while (i)
+					ft_strdel(&result[--i]);
+				ft_strdel((char**)&result);
 				return (NULL);
 			}
 			result[i] = ft_str_cpy(result[i], tmp, c);

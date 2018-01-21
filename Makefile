@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: afarapon <afarapon@student.unit.ua>        +#+  +:+       +#+         #
+#    By: afarapon <afarapon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/10/28 14:40:16 by afarapon          #+#    #+#              #
-#    Updated: 2017/11/06 23:52:22 by afarapon         ###   ########.fr        #
+#    Updated: 2018/01/08 13:47:00 by afarapon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,7 +76,24 @@ FILES = ft_atoi.c \
 	ft_strtrim.c \
 	ft_swap.c \
 	ft_tolower.c \
-	ft_toupper.c
+	ft_toupper.c \
+	basic_functions.c \
+	get_flags.c \
+	additional.c \
+	print_characters.c \
+	print_u_characters.c \
+	print_hex.c \
+	print_integer.c \
+	print_memory.c \
+	print_octal.c \
+	print_percent.c \
+	print_strings.c \
+	print_u_string.c \
+	print_uint.c \
+	service_one.c \
+	service_two.c \
+	get_next_line.c
+
 OBJ = $(FILES:.c=.o)
 CC = gcc
 LBH = libft.h

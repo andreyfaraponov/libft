@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afarapon <afarapon@student.unit.ua>        +#+  +:+       +#+        */
+/*   By: afarapon <afarapon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/28 16:13:07 by afarapon          #+#    #+#             */
-/*   Updated: 2017/11/19 00:23:35 by afarapon         ###   ########.fr       */
+/*   Updated: 2017/10/28 16:13:08 by afarapon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char		*ft_strcat(char *dest, const char *src)
 {

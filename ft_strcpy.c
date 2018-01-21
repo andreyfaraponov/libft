@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afarapon <afarapon@student.unit.ua>        +#+  +:+       +#+        */
+/*   By: afarapon <afarapon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/28 16:13:23 by afarapon          #+#    #+#             */
-/*   Updated: 2017/11/19 00:24:13 by afarapon         ###   ########.fr       */
+/*   Updated: 2017/10/28 21:01:58 by afarapon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char		*ft_strcpy(char *dst, const char *src)
 {

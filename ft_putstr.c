@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afarapon <afarapon@student.unit.ua>        +#+  +:+       +#+        */
+/*   By: afarapon <afarapon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/28 16:13:04 by afarapon          #+#    #+#             */
-/*   Updated: 2017/11/19 00:23:02 by afarapon         ###   ########.fr       */
+/*   Updated: 2017/10/29 16:40:26 by afarapon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,6 @@
 void		ft_putstr(const char *s)
 {
 	if (s)
-		write(1, s, ft_strlen(s));
+		while (*s)
+			write(1, s++, 1);
 }

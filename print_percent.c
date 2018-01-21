@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   print_percent.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afarapon <afarapon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/28 16:13:47 by afarapon          #+#    #+#             */
-/*   Updated: 2017/10/29 16:05:49 by afarapon         ###   ########.fr       */
+/*   Created: 2018/01/04 21:29:34 by afarapon          #+#    #+#             */
+/*   Updated: 2018/01/08 12:36:09 by afarapon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strequ(char const *s1, char const *s2)
+char		*ft_print_percent(char **f, t_all_flags flags)
 {
-	if (s1 && s2)
-	{
-		while (*s1 == *s2)
-		{
-			if (*s1 == '\0')
-				return (1);
-			s1++;
-			s2++;
-		}
-	}
-	return (0);
+	char	*res;
+
+	(*f)++;
+	res = ft_strnew(1);
+	res[0] = '%';
+	res = ft_make_width_char(res, flags);
+	return (res);
 }
