@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afarapon <afarapon@student.unit.ua>        +#+  +:+       +#+        */
+/*   By: afarapon <afarapon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/28 16:20:21 by afarapon          #+#    #+#             */
-/*   Updated: 2018/01/22 01:25:59 by afarapon         ###   ########.fr       */
+/*   Updated: 2018/01/24 19:27:50 by afarapon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # define M2_TWO(chr) (unsigned char)(((chr << 20) >> 26) | 128)
 # define M3_ONE(chr) (unsigned char)(((chr << 11) >> 29) | 240)
 # define M3_TWO(chr) (unsigned char)(((chr << 14) >> 26) | 128)
-# define BUFF_SIZE 777
+# define BUFF_SIZE 1
 # include <stdarg.h>
 # include <limits.h>
 # include <inttypes.h>
